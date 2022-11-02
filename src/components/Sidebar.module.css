@@ -1,0 +1,17 @@
+.sidebar {
+  grid-area: sidebar;
+  padding-top: 20px;
+  margin: 0 7.5px 0 15px;
+}
+
+.nav {
+  font-size: 13px;
+}
+
+.item {
+  margin: 10px 0;
+}
+
+.item:last-child {
+  margin-top: 50px;
+}

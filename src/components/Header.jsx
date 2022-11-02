@@ -1,10 +1,11 @@
 import React from 'react';
+import s from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className='header'>
-      <div className='container header__container'>
-        <a href='/#' className='logo'>MyApp</a>
+    <header className={s.header}>
+      <div className={s.container}>
+        <a href='/#' className={s.logo}>MyApp</a>
       </div>
     </header>
   )
