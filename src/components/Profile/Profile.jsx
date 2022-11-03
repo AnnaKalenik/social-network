@@ -1,9 +1,11 @@
 import React from 'react';
+import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css';
 
 const Profile = () => {
   return (
     <main className={s.main}>
+
       <div className={s.bg}>
         <img className={s.img} src='https://celes.club/uploads/posts/2022-05/thumbs/1653682560_8-celes-club-p-fon-dlya-uroka-v-zum-krasivie-9.png' alt='Фоновое изображение профиля'></img>
       </div>
@@ -21,25 +23,9 @@ const Profile = () => {
           </ul>
         </div>
       </div>
-      <div className={s.posts}>
-        <h2 className={s.title}>My posts</h2>
-        <div className={s.new_post}>
-          <form action='post' className={s.form}>
-            <textarea name='text' id='field-text' className={s.input} placeholder='your new post...' rows='1'></textarea>
-            <input type="submit" className={s.btn}></input>
-          </form>
-        </div>
-        <ul className={s.publ_posts}>
-          <li className={s.post}>My post 1</li>
-          <li className={s.post}>My post 2</li>
-          <li className={s.post}>My post 3</li>
-          <li className={s.post}>My post 4</li>
-          <li className={s.post}>My post 5</li>
-          <li className={s.post}>My post 6</li>
-          <li className={s.post}>My post 7</li>
-          <li className={s.post}>My post 8</li>
-        </ul>
-      </div>
+
+      <MyPosts />
+      
     </main>
   )
 }
