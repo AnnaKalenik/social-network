@@ -12,7 +12,11 @@ const MyPosts = () => {
         <button className={s.btn}>Add post</button>
       </div>
       
-      <Post />
+      <Post message="Hi! I'm so glad to see you! How are you?😄" />
+      <Post message="WOW! This is my first post?😎" />
+      <Post message="I'm going on vacation. See you next month.🌏🖐" />
+      <Post message="I like your photo! Cool)😍👍" />
+
     </div>
   )
 }
