@@ -26,14 +26,14 @@ a {
 
 .app-wrapper {
   display: grid;
-  grid-template-columns: 1fr 200px 906px 1fr;
+  grid-template-columns: 1fr 200px 900px 1fr;
   grid-template-rows: 50px auto;
   grid-template-areas: "header header header header" ". sidebar content .";
+  color: #2D2D2D;
   padding: 0 0 20px 0;
 }
 
 .app-wrapper-content {
   grid-area: content;
   padding-top: 20px;
-  margin: 0 15px 0 7.5px;
 }
