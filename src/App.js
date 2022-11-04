@@ -1,4 +1,5 @@
 import './App.css';
+import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -8,7 +9,10 @@ const App = () => {
     <div className='app-wrapper'>
       <Header />
       <Sidebar />
-      <Profile />
+      <main className="app-wrapper-content">
+        <Dialogs />
+        {/* <Profile /> */}
+      </main>
     </div>
   );
 }

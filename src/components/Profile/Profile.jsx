@@ -4,7 +4,7 @@ import s from './Profile.module.css';
 
 const Profile = () => {
   return (
-    <main className={s.main}>
+    <div>
 
       <div className={s.bg}>
         <img className={s.img} src='https://celes.club/uploads/posts/2022-05/thumbs/1653682560_8-celes-club-p-fon-dlya-uroka-v-zum-krasivie-9.png' alt='Profile background'></img>
@@ -26,7 +26,7 @@ const Profile = () => {
 
       <MyPosts />
       
-    </main>
+    </div>
   )
 }
 export default Profile;
