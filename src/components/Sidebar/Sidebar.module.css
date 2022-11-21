@@ -10,25 +10,21 @@
   font-size: 13px;
 }
 
-.item {
+.link {
   padding: 10px 7px;
   transition: all 0.3s ease;
 }
 
-.item:last-child {
+.link:last-child {
   margin-top: 50px;
 }
 
-.item:hover{
+.link:hover{
   border-radius: 4px;
   background-color: #E8E2E2;
-}
-
-.link {
-  transition: all 0.3s ease;
 } 
 
 .active {
   color: #F38383;
-  transition: all 0.3s ease;
+  padding: 10px 7px;
 }
