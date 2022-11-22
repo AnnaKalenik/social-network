@@ -1,73 +1,49 @@
 import React from 'react';
-import s from './Messenger.module.css'
+import { NavLink } from 'react-router-dom';
+import s from './Messenger.module.css';
+
+const DialogItem = (props) => {
+  let path = "/messages/" + props.id;
+
+  return (
+    <NavLink to={path} className={ activeLink => activeLink.isActive ? s.active : s.dialog }>
+      <div className={s.photo_user}></div>
+      <div className={s.name_user}>{props.name}</div>
+    </NavLink>
+  )
+}
+
+const MessageItem = (props) => {
+  return (
+    <div className={s.user}>
+      <div className={s.data}>
+        <div className={s.photo_user}></div>
+        <div className={s.name_user}>{props.name}</div>
+      </div>
+      <div className={s.message}>{props.message}</div>
+    </div>
+  )
+}
 
 const Messenger = () => {
   return (
     <div className={s.messenger}>
 
-      <ul className={s.dialogs}>
-        <li className={s.dialog}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user}>Constantine</div>
-        </li>
-        <li className={s.dialog}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user}>Anna</div>
-        </li>
-        <li className={s.dialog}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user}>Julia</div>
-        </li>
-        <li className={s.dialog}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user}>Sofia</div>
-        </li>
-        <li className={s.dialog}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user}>Alex</div>
-        </li>
-        <li className={s.dialog + ' ' + s.active}>
-          <div className={s.photo_user}></div>
-          <div className={s.name_user + ' ' + s.active}>Karina</div>
-        </li>
-      </ul>
+      <div className={s.dialogs}>
+        <DialogItem id='dialog1' name='Constantine' />
+        <DialogItem id='dialog2' name='Anna' />
+        <DialogItem id='dialog3' name='Julia' />
+        <DialogItem id='dialog4' name='Sofia' />
+        <DialogItem id='dialog5' name='Alex' />
+        <DialogItem id='dialog6' name='Karina' />
+      </div>
 
       <div className={s.messages}>
-        <div className={s.user}>
-          <div className={s.data}>
-            <div className={s.photo_user}></div>
-            <div className={s.name_user}>Karina</div>
-          </div>
-          <div className={s.message}>Hi!🤗</div>
-        </div>
-        <div className={s.user}>
-          <div className={s.data}>
-            <div className={s.photo_user}></div>
-            <div className={s.name_user}>Karina</div>
-          </div>
-          <div className={s.message}>How are you?</div>
-        </div>
-        <div className={s.user}>
-          <div className={s.data}>
-            <div className={s.photo_user}></div>
-            <div className={s.name_user}>Ann</div>
-          </div>
-          <div className={s.message}>Yo!😎🤗</div>
-        </div>
-        <div className={s.user}>
-          <div className={s.data}>
-            <div className={s.photo_user}></div>
-            <div className={s.name_user}>Ann</div>
-          </div>
-          <div className={s.message}>Great!</div>
-        </div>
-        <div className={s.user}>
-          <div className={s.data}>
-            <div className={s.photo_user}></div>
-            <div className={s.name_user}>Ann</div>
-          </div>
-          <div className={s.message}>And you?</div>
-        </div>
+        <MessageItem name='Karina' message='Hi!🤗' />
+        <MessageItem name='Karina' message='How are you?' />
+        <MessageItem name='Ann' message='Yo!😎🤗' />
+        <MessageItem name='Ann' message='Great!' />
+        <MessageItem name='Ann' message='And you?' />
       </div>
     </div>
   )

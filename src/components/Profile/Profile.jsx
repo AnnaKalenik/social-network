@@ -6,6 +6,8 @@ const Profile = () => {
   return (
     <div>
 
+      {/* Выделить в отдельную компоненту ProfileInfo */}
+
       <div className={s.bg}>
         <img className={s.img} src='https://celes.club/uploads/posts/2022-05/thumbs/1653682560_8-celes-club-p-fon-dlya-uroka-v-zum-krasivie-9.png' alt='Profile background'></img>
       </div>

@@ -5,6 +5,7 @@
   background-color: #FFFFFF;
   border: 1px solid #dadada;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .dialogs {
@@ -13,7 +14,8 @@
 }
 
 .dialog,
-.data {
+.data,
+.active {
   display: flex;
   align-items: center;
   padding: 10px 15px;
@@ -21,16 +23,18 @@
   transition: all 0.3s ease;
 }
 
-.dialog:not(:last-child) {
-  border-bottom: 1px solid #dadada;
-}
-
 .dialog:hover {
   background-color: #f5f0f0;
 }
 
-.dialog.active {
+.active {
+  color: #F38383;
   background-color: #f5f0f0;
+}
+
+.dialog:not(:last-child),
+.active:not(:last-child) {
+  border-bottom: 1px solid #dadada;
 }
 
 .photo_user {
@@ -46,10 +50,6 @@
 .name_user {
   height: 100%;
   font-weight: 500;
-}
-
-.name_user.active {
-  color: #F38383;
 }
 
 .messages {
