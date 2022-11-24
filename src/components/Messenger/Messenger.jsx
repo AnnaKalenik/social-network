@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import s from './Messenger.module.css';
 
 const DialogItem = (props) => {
-  let path = "/messages/" + props.id;
+  let path = "/messages/dialog/" + props.id;
 
   return (
     <NavLink to={path} className={ activeLink => activeLink.isActive ? s.active : s.dialog }>
@@ -26,24 +26,41 @@ const MessageItem = (props) => {
 }
 
 const Messenger = () => {
+  let dialogsData = [
+    {id: 1, name: 'Constantine'},
+    {id: 2, name: 'Anna'},
+    {id: 3, name: 'Julia'},
+    {id: 4, name: 'Sofia'},
+    {id: 5, name: 'Alex'},
+    {id: 6, name: 'Karina'},
+  ];
+
+  let messagesData = [
+    {id: 1, name: 'Karina', message: 'Hi!🤗'},
+    {id: 2, name: 'Karina', message: 'How are you?'},
+    {id: 3, name: 'Ann', message: 'Yo!😎🤗'},
+    {id: 4, name: 'Ann', message: 'Great!'},
+    {id: 5, name: 'Ann', message: 'And you?'},
+  ];
+
   return (
     <div className={s.messenger}>
 
       <div className={s.dialogs}>
-        <DialogItem id='dialog1' name='Constantine' />
-        <DialogItem id='dialog2' name='Anna' />
-        <DialogItem id='dialog3' name='Julia' />
-        <DialogItem id='dialog4' name='Sofia' />
-        <DialogItem id='dialog5' name='Alex' />
-        <DialogItem id='dialog6' name='Karina' />
+        <DialogItem id={dialogsData[0].id} name={dialogsData[0].name} />
+        <DialogItem id={dialogsData[1].id} name={dialogsData[1].name} />
+        <DialogItem id={dialogsData[2].id} name={dialogsData[2].name} />
+        <DialogItem id={dialogsData[3].id} name={dialogsData[3].name} />
+        <DialogItem id={dialogsData[4].id} name={dialogsData[4].name} />
+        <DialogItem id={dialogsData[5].id} name={dialogsData[5].name} />
       </div>
 
       <div className={s.messages}>
-        <MessageItem name='Karina' message='Hi!🤗' />
-        <MessageItem name='Karina' message='How are you?' />
-        <MessageItem name='Ann' message='Yo!😎🤗' />
-        <MessageItem name='Ann' message='Great!' />
-        <MessageItem name='Ann' message='And you?' />
+        <MessageItem name={messagesData[0].name} message={messagesData[0].message} />
+        <MessageItem name={messagesData[1].name} message={messagesData[1].message} />
+        <MessageItem name={messagesData[2].name} message={messagesData[2].message} />
+        <MessageItem name={messagesData[3].name} message={messagesData[3].message} />
+        <MessageItem name={messagesData[4].name} message={messagesData[4].message} />
       </div>
     </div>
   )
